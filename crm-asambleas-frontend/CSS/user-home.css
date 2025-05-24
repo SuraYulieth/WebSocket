@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background: linear-gradient(to right, #007bff, #00bfff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    padding: 0 30px;
+    border-radius: 0 0 20px 20px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header a{
+	font-family: 'quicksand', sans-serif;
+    text-decoration: none;
+    color: Black;    
+    font-weight: 800;
+    font-size: 25px;
+}
+header nav  a{
+    text-decoration: none;
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    border: 2px solid #339cff;
+    padding: 8px;
+    border-radius: 10px;
+	margin-right: 20px;
+}
+header nav a:hover{
+    background-color: whitesmoke;
+}
+body{
+    background-image:url("../img/fondo.jpg");
+}
+
+.centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; 
+	gap: 0.5rem;
+
+}
+.centrado h1 span {
+    margin-right: 0.2rem; 
+}
+
+.centrado img {
+    max-width: 300px;
+    width: 200%;
+    height: auto;
+	vertical-align: middle;
+	
+}
+
+.centrado h1 {
+    margin: 0;
+    color: #000; 
+	
+}
+.bg-body-tertiary {
+    background-color: #2196f3 !important; /* azul más vivo */
+}
+
+footer {
+    background-color: #150370;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.dropdown-menu {
+  background: linear-gradient(to right, #00b4db, #0083b0); /* Degradado */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  min-width: 220px;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+font-size: 0.9rem;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.dropdown-menu .dropdown-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 0.3rem 1rem;
+}

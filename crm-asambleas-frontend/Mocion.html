@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Nueva Moción</title>
+<link rel="icon" type="image/png" href="IMG/crm-3.png">
+<link rel="stylesheet" href="CSS/Mocion.css">
+<link rel="stylesheet" href="CSS/bootstrap.min.css">
+
+</head>
+
+<body>
+	<header>
+<nav class="navbar navbar-expand-lg my-navbar">
+		<div class="container-fluid">
+	
+		<a href="Home.html" class="navbar-brand">CRM ASAMBLEAS</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+	
+	</div>
+		</nav>
+		<nav class="navbar navbar-expand-lg my-navbar">
+	<div class="container-fluid">
+		<ul >
+          <li>
+            <a  href="Login.html">Cerrar Sesión</a>
+          </li>
+        </ul>
+		</div>
+	</nav>
+	</header>
+<div class="contenedor-bootstrap px-4 text-center contenido-principal">
+  <div class="fila-bootstrap gx-5">
+    <div class="columna-bootstrap">
+      <div class="p-3 borde-claro fondo-claro">
+		  <span class="label-titulo"><h4>Detalles nueva moción</h4></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label"><h4>Documento Cliente:</h4></label>
+  <div class="d-flex gap-2">
+    <input type="text" class=" bordes-claros fondo-claro" id="formGroupExampleInput" placeholder="Ingrese Documento">
+    <input type="text" id="documentoCliente" hidden value=""> 
+   <button id="btnConsultar" class="btn btn-primary" type="button">Consultar</button>
+  </div>
+</div>
+
+
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label for="RazonSocial" class="form-label">Razón Social</label>
+     <input type="text" id="RazonSocial" class="form-control" placeholder="Nombre" readonly>
+    </div>
+    <div class="col-md-4">
+      <label for="Representante_Legal" class="form-label">Representante Legal</label>
+      <input type="text" id="Representante_Legal" class="form-control" placeholder="Representante Legal" readonly>
+    </div>
+    
+   
+
+
+<!-- Descripción, moción y adjuntar documentos (todos juntos) -->
+<div class="mb-3">
+  <div class="row">
+	     <!-- Moción a Votar -->
+
+       <div><label class="form-label"><h5>Asunto Asambleas:</h5></label>
+     <input type="text" id="AsuntoAsamblea" class="borde-claros fondo-claro" placeholder="Ingrese el Asunto a votar"></div>
+    <div class="col-md-4 mb-3">
+       
+      <label class="form-label"><h5>Moción a Votar:</h5></label>
+     <input type="text" id="preguntaVotada" class="borde-claros fondo-claro" placeholder="Ingrese la pregunta a votar">
+		<select id="tipoMocion" class="form-select" aria-label="Default select example">
+  <option selected>Tipo de Moción</option>
+  <option value="1">Principal</option>
+  <option value="2">Especial</option>
+  <option value="3">Incidental</option>
+  <option value="4">Privilegiada</option>
+  <option value="5">Subsidiaria</option>
+</select>
+<label class="form-label"><h6>Modalidad:</h6></label>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Presencial" id="Presencial">
+  <label class="form-check-label" for="Presencial">Presencial</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Virtual" id="Virtual">
+  <label class="form-check-label" for="Virtual">Virtual</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Mixta" id="Mixta">
+  <label class="form-check-label" for="Mixta">Mixta</label>
+</div>
+    </div>
+    <!-- Descripción -->
+    <div class="col-md-6 mb-3">
+      <label for="Descripcion" class="form-label"><h5>Descripción de la Moción:</h5></label>
+      <textarea id="descripcion" class="borde-claros fondo-claro" rows="4"></textarea>
+	<button id="btnAdjuntar" class="btn btn-primary w-100" type="button">Adjuntar Documentos</button>
+<span id="nombreArchivo" style="margin-left: 10px; font-weight: bold;"></span>
+<input type="file" id="inputFile" style="display:none" />
+
+    </div>
+<div class="mb-3">
+  <label for="fechaProgramacion" class="form-label">
+    <h5>Fecha de Programación:</h5>
+  </label>
+  <input type="date" id="fechaProgramacion" class="borde-claros fondo-claro" name="fechaProgramacion">
+
+</div>
+ 
+
+  
+  </div>
+</div>
+
+	
+	
+	
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crear_mocion">
+ Crear Moción
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="crear_mocion" tabindex="-1" aria-labelledby="Mocion" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación de la moción</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       ¿Esta seguro de que desea crear esta Moción?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de éxito -->
+<div class="modal fade" id="mimodal" tabindex="-1" aria-labelledby="mimodalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="mimodalLabel">¡Éxito!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <p id="mensaje_mimodal">La moción fue registrada correctamente.</p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+	
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+   // Variables globales
+  let lastIdMocion = null;
+
+  // Inicializa modales de Bootstrap
+  const confirmModalEl = document.getElementById('crear_mocion');
+  const confirmModal   = new bootstrap.Modal(confirmModalEl);
+  const mimodalEl      = document.getElementById('mimodal');
+  const mimodal        = new bootstrap.Modal(mimodalEl);
+
+  // 1) Botón Consultar cliente
+  document.getElementById('btnConsultar').addEventListener('click', async () => {
+    const documento = document.getElementById('formGroupExampleInput').value;
+    try {
+      const response = await fetch(`http://localhost:3000/api/cliente/${documento}`);
+      const data = await response.json();
+      if (response.ok) {
+        document.getElementById('RazonSocial').value         = data.RazonSocial;
+        document.getElementById('Representante_Legal').value = data.RepresentanteLegal;
+      } else {
+        alert(data.message);
+      }
+    } catch (e) {
+      alert('Error al consultar el cliente');
+      console.error(e);
+    }
+  });
+
+  // 2) Adjuntar documento (disparar input file)
+  document.getElementById('btnAdjuntar').addEventListener('click', () => {
+    document.getElementById('inputFile').click();
+  });
+
+  // 3) Manejar selección de archivo y enviar al servidor
+  document.getElementById('inputFile').addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    const span  = document.getElementById('nombreArchivo');
+    if (!file) {
+      span.textContent = '';
+      return;
+    }
+    span.textContent = file.name;
+
+    // Solo sube si ya tenemos una moción creada
+    if (!lastIdMocion) return;
+
+    const formData = new FormData();
+    formData.append('archivo', file);
+
+    try {
+      const resp = await fetch(`http://localhost:3000/api/mocion/${lastIdMocion}/archivo`, {
+        method: 'POST',
+        body: formData
+      });
+      const json = await resp.json();
+      if (!resp.ok) throw new Error(json.message);
+      console.log('Archivo subido:', json.message);
+    } catch (err) {
+      console.error('Error subiendo archivo:', err);
+      alert('No se pudo subir el archivo: ' + err.message);
+    }
+  });
+
+  // 4) Crear Moción: botón “Confirmar” dentro del modal de confirmación
+  document.querySelector('#crear_mocion .modal-footer .btn-primary')
+    .addEventListener('click', async () => {
+
+    // Recoger datos del formulario
+    const preguntaVotada     = document.getElementById('preguntaVotada').value.trim();
+    const tipoMocion         = +document.getElementById('tipoMocion').value;
+    const descripcion         = document.getElementById('descripcion').value.trim();
+    const fechaProgramacion   = document.getElementById('fechaProgramacion').value;
+    const documentoCliente    = document.getElementById('formGroupExampleInput').value.trim();
+
+    const modalidades = Array.from(
+      document.querySelectorAll('.form-check-input:checked')
+    ).map(chk => chk.value);
+
+    // Validar
+    if (!preguntaVotada || !tipoMocion || !descripcion
+        || !fechaProgramacion || !documentoCliente) {
+      alert('Por favor completa todos los campos requeridos.');
+      return;
+    }
+
+    // Enviar al backend
+    try {
+      const res = await fetch('http://localhost:3000/api/mocion', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          preguntaVotada,
+          tipoMocion,
+          descripcion,
+          fechaProgramacion,
+          documentoCliente,
+          modalidades
+        })
+      });
+      const body = await res.json();
+      if (!res.ok) throw new Error(body.message || 'Error desconocido');
+
+      // Guardamos el ID devuelto para subir archivos luego
+      lastIdMocion = body.idAsamblea || body.idMocion || null;
+
+      // Cerramos el modal de confirmación
+      confirmModal.hide();
+
+      // Mostrar modal de éxito con mensaje
+      document.getElementById('mensaje_mimodal').textContent =
+        `Moción creada con éxito. ID: ${lastIdMocion}`;
+      mimodal.show();
+
+    } catch (err) {
+      console.error('Error creando la moción:', err);
+      alert('Hubo un error creando la moción:\n' + err.message);
+    }
+  });
+</script>
+
+</body>
+	
+	<footer>
+      <p>Copyright © 2025 Asambleas SAS  Medellin - Colombia |<a href="Politica_Privacidad3.html" target="_blank"> Políticas de privacidad</a> </p> 
+																	  
+    </footer>
+</html>

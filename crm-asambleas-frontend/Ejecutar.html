@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejecutar Moción</title>
+    <link rel="icon" type="image/png" href="IMG/crm-3.png">
+    <link rel="stylesheet" href="CSS/ejecutar.css">
+<link rel="stylesheet" href="CSS/bootstrap.min.css">
+</head>
+<body>
+ <header>
+<nav class="navbar navbar-expand-lg my-navbar">
+		<div class="container-fluid">
+	
+		<a href="Home.html" class="navbar-brand">CRM ASAMBLEAS</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+	
+	</div>
+		</nav>
+		<nav class="navbar navbar-expand-lg my-navbar">
+	<div class="container-fluid">
+		<ul >
+          <li>
+            <a  href="Login.html">Cerrar Sesión</a>
+          </li>
+        </ul>
+		</div>
+	</nav>
+	</header>
+
+<div class="contenedor-bootstrap px-4 text-center contenido-principal">
+  <div class="fila-bootstrap gx-5">
+    <div class="columna-bootstrap">
+      <div class="p-3 borde-claro fondo-claro">
+		  <span class="label-titulo"><h4>Ejecutar Moción</h4></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <h3 class="text-center mb-4">Detalle de Mociones</h3>
+  <table class="table table-bordered table-hover">
+    <thead class="table-primary text-center">
+      <tr>
+        <th>Pregunta Votada</th>
+        <th>Descripción</th>
+        <th>Tipo de Moción</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="mocion">
+      <tr>
+        <td>¿Aprobar presupuesto?</td>
+        <td>Se vota el presupuesto anual para proyectos.</td>
+        <td>Ordinaria</td>
+        <td class="text-center">
+          <!-- Botón Ejecutar que lanza el modal -->
+          <button type="button" class="btn btn-success btn-sm btn-ejecutar me-1" data-bs-toggle="modal" data-bs-target="#modalEjecutar1">
+            Ejecutar
+          </button>
+          <!-- Botones Editar y Eliminar -->
+          <button class="btn btn-warning btn-sm btn-editar me-1">Editar</button>
+          <button class="btn btn-danger btn-sm">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal para Ejecutar Moción -->
+<div class="modal fade" id="modalEjecutar1" tabindex="-1" aria-labelledby="modalEjecutarLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalEjecutarLabel1">Ejecutar Moción</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de que deseas ejecutar esta moción? </strong>
+        <p>Ten presente que una vez ejecutada no se puede detener.</p>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-confirmar">Confirmar Ejecución</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+<footer>
+      <p>Copyright © 2025 Asambleas SAS  Medellin - Colombia |<a href="Politica_Privacidad3.html" target="_blank"> Políticas de privacidad</a> </p> 
+																	  
+    </footer>
+</html>
